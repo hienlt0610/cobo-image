@@ -48,13 +48,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
             holder.itemView.setBackground(null);
             holder.imageView.setAllowPinch(false);
         }
-        holder.imageView.post(new Runnable() {
-            @Override
-            public void run() {
-                holder.imageView.setImageResource(integers.get(holder.getAdapterPosition()));
-                holder.imageView.setScrollPosition(1f, 1f);
-            }
-        });
+        holder.imageView.setImageResource(integers.get(holder.getAdapterPosition()));
     }
 
     private void bindColRowGrid(final ViewHolder holder, final int position) {
